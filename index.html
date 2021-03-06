@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/burger-menu.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="header__top">
+        <div class="logo">
+          <a href="#header">
+            <img src="images/Logo.svg">
+          </a>
+        </div>
+        <div class="overlay">
+          <nav class="overlayMenu">  
+            <ul role="menu" class="menu__list">
+                <li><a href="#header" class="menu__link">Home</a></li>
+                <li><a href="#specialised" class="menu__link">Work</a></li>
+                <li><a href="#adventages" class="menu__link">About</a></li>
+                <li><a href="#reviews" class="menu__link">Contact</a></li>
+            </ul> 
+          </nav>
+        </div>
+      <div class="navBurger" role="navigation" id="navToggle"></div> 
+      </div>
+      <!-- <div class="container-slider"> -->
+        <div class="slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide-content">
+                <div class="swiper-slide-info">
+                  <h3 class="swiper-slide__title">We Build Apps & Websites for Your Business 1</h3>
+                  <div class="swiper-slide__description">For startups, For businesses & For you</div>
+                  <a href="#" class="swiper-slide__btn">Request a quote</a>
+                </div>
+                <div class="swiper-slide-images">
+                  <img src="images/slider-img.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-content">
+                <div class="swiper-slide-info">
+                  <h3 class="swiper-slide__title">We Build Apps & Websites for Your Business 2</h3>
+                  <div class="swiper-slide__description">For startups, For businesses & For you</div>
+                  <a href="#" class="swiper-slide__btn">Request a quote</a>
+                </div>
+                <div class="swiper-slide-images">
+                  <img src="images/slider-img.png" alt="">
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-content">
+                <div class="swiper-slide-info">
+                  <h3 class="swiper-slide__title">We Build Apps & Websites for Your Business 3</h3>
+                  <div class="swiper-slide__description">For startups, For businesses & For you</div>
+                  <a href="#" class="swiper-slide__btn">Request a quote</a>
+                </div>
+                <div class="swiper-slide-images">
+                  <img src="images/slider-img.png" alt="">
+                </div>
+              </div>        
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-content">
+                <div class="swiper-slide-info">
+                  <h3 class="swiper-slide__title">We Build Apps & Websites for Your Business 4</h3>
+                  <div class="swiper-slide__description">For startups, For businesses & For you</div>
+                  <a href="#" class="swiper-slide__btn">Request a quote</a>
+                </div>
+                <div class="swiper-slide-images">
+                  <img src="images/slider-img.png" alt="">
+                </div>
+              </div>         
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-slide-content">
+                <div class="swiper-slide-info">
+                  <h3 class="swiper-slide__title">We Build Apps & Websites for Your Business 5</h3>
+                  <div class="swiper-slide__description">For startups, For businesses & For you</div>
+                  <a href="#" class="swiper-slide__btn">Request a quote</a>
+                </div>
+                <div class="swiper-slide-images">
+                  <img src="images/slider-img.png" alt="">
+                </div>
+              </div>           
+            </div> 
+          </div>
+          <!-- Пагинация -->
+          <div class="swiper-pagination"></div>
+        </div>
+    </div>
+      <div class="form__overlay"></div>
+      <div class="form-active">
+        <p><span>Leave a request</span> <br>and we will contact you shortly</p>
+        <form method="post" action="" id="formMain">
+        <input id="name" type="text" name="name" placeholder="Enter your name" maxlength="30" autocomplete="off" />
+        <input id="telephone" type="text" name="telephone" placeholder="Enter your phone" maxlength="30" autocomplete="off"/>
+       <div class="feedback__wrapper">
+        <label>
+          <input id="feedback" type="checkbox" name="feedback" value="yes">
+          <span>By submitting information through the <br/>electronic form, <span>you consent to the processing of the information </span> provided by you</span>
+        </label>
+       </div>
+        
+          <div id="messegeResult">
+            <input class="btn" id="button" type="button"  value="S e n d" onclick="AjaxFormRequest('messegeResult', 'formMain', 'zakaz.php')"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <a id="button-top"></a>
+  </header>
+   <section id="specialised">
+    <div class="container">
+      <div class="specialised__title title">
+        We are specialised in
+      </div>
+      <div class="specialised__items">
+        <div class="specialised__item">
+          <img class="specialised__item-img" src="images/special-1.svg" alt="">
+          <div class="specialised__item-title">UI/UX Design</div>
+          <div class="specialised__item-text">In hac habitasse platea dictumstmus adipiscing fermentum quam volutpat aliquam. Integer cilisis tristique.</div>
+        </div>
+        <div class="specialised__item">
+          <img class="specialised__item-img" src="images/special-2.svg" alt="">
+          <div class="specialised__item-title">Web Development</div>
+          <div class="specialised__item-text">In hac habitasse platea dictumstmus adipiscing fermentum quam volutpat aliquam. Integer cilisis tristique.</div>
+        </div>
+        <div class="specialised__item">
+          <img class="specialised__item-img" src="images/special-3.svg" alt="">
+          <div class="specialised__item-title">App Development</div>
+          <div class="specialised__item-text">In hac habitasse platea dictumstmus adipiscing fermentum quam volutpat aliquam. Integer cilisis tristique.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+   <section id="adventages">
+    <div class="container">
+      <div class="adventages-box">
+        <div class="adventages-box__info">
+          <div class="adventages-box__title">Experienced Designers & Developers</div>
+          <div class="adventages-box__text">
+            <p>
+              Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa.
+            </p>
+            <p>Vestibulum sed metus in lorem tristique ullamcorper id vitae erat.</p>
+          </div>
+        </div>
+        <div class="adventages-box__images">
+          <img src="images/adventages-img-box1.svg" alt="">
+        </div>
+      </div>
+      <div class="adventages-box adventages-box--right">
+        <div class="adventages-box__images">
+          <img src="images/adventages-img-box2.png" alt="">
+        </div>
+        <div class="adventages-box__info">
+          <div class="adventages-box__title">Information Architect &
+            Visual Prototyping</div>
+          <div class="adventages-box__text">
+            <p>
+              Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa.
+            </p>
+            <p>Vestibulum sed metus in lorem tristique ullamcorper id vitae erat.</p>
+          </div>
+        </div>
+      </div>
+      <div class="adventages-box">
+        <div class="adventages-box__info">
+          <div class="adventages-box__title">Idea Generation &
+            Foundation</div>
+          <div class="adventages-box__text">
+            <p>
+              Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa.
+            </p>
+            <p>Vestibulum sed metus in lorem tristique ullamcorper id vitae erat.</p>
+          </div>
+        </div>
+        <div class="adventages-box__images">
+          <img src="images/adventages-img-box3.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="reviews">
+    <div class="container">
+      <div class="reviews__title title">Don’t Just Take Our <br>Words</div>
+      <div class="reviews__items">
+        <div class="reviews__item">
+          <div class="reviews__item-head">
+            <img src="images/review-one.jpg" alt="">
+            <div class="reviews__item-info">
+             <div class="reviews__item-name">Arakat Bank</div>
+             <div class="reviews__item-position">International Bank Ltd.</div>
+            </div>
+          </div>
+          <div class="reviews__item-text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum.</div>
+        </div>
+        <div class="reviews__item">
+          <div class="reviews__item-head">
+            <img src="images/review-two.jpg" alt="">
+            <div class="reviews__item-info">
+             <div class="reviews__item-name">Chrsitopher Company Ltd.</div>
+             <div class="reviews__item-position">Design & Development</div>
+            </div>
+          </div>
+          <div class="reviews__item-text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum.</div>
+        </div>
+        <div class="reviews__item">
+          <div class="reviews__item-head">
+            <img src="images/review-three.jpg" alt="">
+            <div class="reviews__item-info">
+             <div class="reviews__item-name">Jigsawlab Studio Inc.</div>
+             <div class="reviews__item-position">Interactive</div>
+            </div>
+          </div>
+          <div class="reviews__item-text">Fusce vehicula dolor arcu, sit amet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin ipsum.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__iner">
+        <div class="footer__link">
+          <a href="#">About Martaup</a>
+          <a href="#">Help</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer__copy">© 2013-2021 All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/scroll.js"></script>
+  <!-- <script src="js/burgerMenu.js"></script> -->
+  <script src="js/form.js"></script>
+  <!-- <script src="php/order.php"></script> -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
