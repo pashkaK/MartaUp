@@ -1,3 +1,9 @@
+AOS.init({
+  disable: 'phone',
+  disable: 'tablet',
+  disable: 'mobile'
+});
+
 let container = document.querySelector('.container');
 let widthDevice = container.clientWidth;
 let sliderTitle = document.querySelectorAll('.swiper-slide__title');
