@@ -1,6 +1,7 @@
 //Инициализируем слайдер
-let sliderSwiper = new Swiper('.swiper-container',{
-    direction: 'vertical',  
+// let sliderSwiper = new Swiper('.swiper-container',{
+let sliderSwiper = new Swiper('.swiper',{
+    direction: 'vertical',
     //Стрелки
     // navigation: {
     //     nextEl: '.swiper-button-next',

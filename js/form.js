@@ -4,28 +4,40 @@ document.querySelector('.swiper-wrapper').addEventListener('click', function(eve
     $('.form__overlay').fadeIn(600)
 })
     
-$('.btn').on('click', AjaxFormRequest)
-$('.form__overlay').on('click', () => {
-    $('.form-active').fadeOut(500)
-    $('.form__overlay').fadeOut(600)
-})
-function AjaxFormRequest(result_id,formMain,url) {
-    jQuery.ajax({
-        url: url,
-        type: "POST",
-        dataType: "html",
-        data: jQuery("#"+formMain).serialize(),
-        success: function(response) {
-        document.getElementById(result_id).innerHTML = response;
-    },
-    error: function(response) {
-        document.getElementById(result_id).innerHTML = "<p>Возникла ошибка при отправке формы. Попробуйте еще раз</p>";
-    }
-    });
 
-    $(':input','#formMain')
-    .not(':button, :submit, :reset, :hidden')
-    .val('')
-    .removeAttr('checked')
-    .removeAttr('selected');
-}
+
+$(document).ready(function() {
+	$('.form__overlay').on('click', () => {
+		$('.form-active').fadeOut(500)
+		$('.form__overlay').fadeOut(600)
+		setTimeout($('.form-active').fadeOut(500), 2500)
+	})
+	function formRezult () {
+		$('.form__message-rezult').fadeOut(500);
+		$('.form__overlay').fadeOut(600);
+	}
+
+	$("#telephone").mask("0(99) 999-9999");
+
+	//E-mail Ajax Send
+	$("form").submit(function() { //Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", //Change
+			data: th.serialize()
+		}).done(function() {
+			$('.form-active').fadeOut(100);
+			$('.form__message-rezult').fadeIn(300)
+			setTimeout(formRezult, 2500)
+			setTimeout(function() {
+				// Done Functions
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
+});
+
+

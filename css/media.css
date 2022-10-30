@@ -22,7 +22,8 @@
         padding: 50px 0;
     }
 
-    .swiper-container {
+    /*.swiper-container {*/
+    .swiper {
         margin-top: -20px;
 
     }
@@ -86,13 +87,6 @@
 }
 
 @media screen and (max-width: 995px) {
-    /* .header__top {
-        flex-wrap: wrap;
-    }
-
-    .header-btn {
-        width: 100%;
-    } */
     .swiper-slide__description {
         margin-bottom: 25px;
     }
@@ -228,15 +222,10 @@
 
 
 @media screen and (max-width: 768px) {
-    /* .header__top nav {
-        margin-left: 0px;
-    } */
-
     .header__top {
         display: flex;
         justify-content: space-between;
         transition: 0.4s;
-        /* position: fixed; */
     }
 
     .swiper-slide__btn {
@@ -245,10 +234,6 @@
 
     #header {
         min-height: 90%;
-    }
-
-    .swiper-slide-info {
-        /* padding: 0px; */
     }
 }
 
@@ -279,7 +264,6 @@
         position: fixed;
         z-index: 40;
         margin-left: -15px;
-        /* transition: none; */
     }
 }
 @media screen and (max-width: 720px) {
@@ -374,6 +358,7 @@
 @media screen and (max-width: 559px) {
     .specialised__items {
         display: block;
+        text-align: center;
     }
 
     .specialised__item {
@@ -420,7 +405,8 @@
         text-align: center;
     }
 
-    .swiper-container {
+    /*.swiper-container {*/
+    .swiper {
         max-height: 275px;
     }
 
@@ -456,7 +442,7 @@
     }
 
     .btn {
-        left: 27.5%;
+        left: 28%;
     }
 
 }
@@ -482,7 +468,8 @@
     }
 
     .btn {
-        left: 26.5%;
+        left: 27.5%;
+        top: 90%;
     }
 }
 
@@ -529,6 +516,35 @@
     .btn {
         left: 26%;
     }
+
+    @keyframes click-wave {
+        0% {
+          height: 12px;
+          width: 12px;
+          opacity: 0.5;
+          position: relative;
+        }
+        100% {
+          height: 52px;
+          width: 52px;
+          margin-left: -20px;
+          margin-top: -20px;
+          opacity: 0;
+        }
+    }
+      
+    #feedback {
+        height: 12px;
+        width: 12px;
+    }
+
+    #feedback:checked::before {
+        height: 12px;
+        width: 12px;
+        font-size: 12px;
+        line-height: 12px;
+    }
+    
 }
 
 @media screen and (max-width: 350px) {
